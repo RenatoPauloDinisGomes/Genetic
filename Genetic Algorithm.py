@@ -9,7 +9,7 @@ def getRandomChar():
 
 def calFitness(objetivo, atual):
     fitness = 0
-    for i, value in enumerate(objetivo):
+    for i,value in enumerate(objetivo):
         if value == atual[i]:
             fitness += 1
     return fitness
@@ -17,8 +17,7 @@ def calFitness(objetivo, atual):
 
 def main():
     objetivo = raw_input("Enter the Objective String: ")
-    print
-    "Objective: " + objetivo
+    print "Objective: " + objetivo
     dic = {}
     bestest = []
     num_generatons = raw_input("Number of Generations (# for 90000000):")
@@ -115,23 +114,18 @@ def main():
             index = i
 
     if maxi == len(objetivo):
-        print
-        "Reached Objective in " + str(gen) + " Generations"
+        print "Reached Objective in " + str(gen) + " Generations"
 
-    print
-    "Fitness Objective -> " + str(len(objetivo)) + "\nFitness Reached -> " + str(maxi)
+    print "Fitness Objective -> " + str(len(objetivo)) + "\nFitness Reached -> " + str(maxi)
     res = ""
     for i in range(len(objetivo)):
         if objetivo[i] == population[index][i]:
             res += objetivo[i]
         else:
             res += " "
-    print
-    "Result: " + population[index]
-    print
-    "Equals: " + res + "\nGeneration:{Average:Standard Deviation}:"
-    print
-    dic
+    print  "Result: " + population[index]
+    print  "Equals: " + res + "\nGeneration:{Average:Standard Deviation}:"
+    print dic
 
 
 main()

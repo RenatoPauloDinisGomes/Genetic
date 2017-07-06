@@ -118,9 +118,9 @@ def main():
 
     print "Fitness Objective -> " + str(len(objetivo)) + "\nFitness Reached -> " + str(maxi)
     res = ""
-    for i in range(len(objetivo)):
-        if objetivo[i] == population[index][i]:
-            res += objetivo[i]
+    for i,value in enumerate(objetivo):
+        if value == population[index][i]:
+            res += value
         else:
             res += " "
     print  "Result: " + population[index]
